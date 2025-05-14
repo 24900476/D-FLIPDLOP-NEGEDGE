@@ -1,5 +1,6 @@
 # D-FLIPDLOP-NEGEDGE
-
+# NAME : KABIRA A
+# REGISTER NO: 212224040146
 **AIM:**
 
 To implement  D flipflop using verilog and validating their functionality using their functional tables
@@ -32,13 +33,30 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+```
+module d_ff_neg_edge (d, clk, rst, q);
+  input d, clk, rst;
+  output reg q;
+
+  always @(negedge clk or posedge rst) begin
+    if (rst)
+      q <= 0; // Reset the flip-flop
+    else
+      q <= d; // D input is passed to Q on the negative clock edge
+  end
+endmodule
+```
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
+![d8](https://github.com/user-attachments/assets/b9074e1a-e7aa-4a6e-91e9-b58082995fee)
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
+![d8w](https://github.com/user-attachments/assets/dc94e14f-96c2-4b4e-8585-41ecd68f9018)
 
 
 **RESULTS**
+
+Thus the D flip flop using verilog and validating their functional tables is been implemented and successfully.
